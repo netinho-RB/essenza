@@ -2,6 +2,7 @@
    1. GERAL (Roots, Body, H1...) - JÁ ESTÁ PERFEITO NO SEU TOPO
    ========================================================================== */
 :root {
+    color-scheme: light;
     --dark: var(--primary-dark);
     --font-heading: 'Playfair Display', serif;
     --font-text: 'Inter', sans-serif;
@@ -250,31 +251,54 @@ body { overflow-x: hidden; width: 100%; }
     }
 
     .hero-text p {
-        font-size: 1.15rem;
-        color: #666;
-        max-width: 500px;
+        font-size: 1.2rem;
+        color: var(--text-soft);
+        line-height: 1.8;
+        font-weight: 300;
+        max-width: 520px;
         margin-bottom: 45px;
     }
 
     .hero-features {
         display: flex;
-        gap: 30px;
+        gap: 15px;
         margin-bottom: 50px;
+        flex-wrap: wrap;
     }
 
     .feat-item {
-        font-size: 0.65rem;
-        font-weight: 700;
-        color: var(--accent-gold-dark);
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: var(--primary-dark);
         display: flex;
         align-items: center;
         gap: 10px;
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
+        background: rgba(197, 169, 125, 0.08); /* Fundo sutil */
+        padding: 12px 20px;
+        border-radius: 50px;
+        border: 1px solid rgba(197, 169, 125, 0.15); /* Borda elegante */
+        backdrop-filter: blur(10px); /* Efeito vidro suave */
+        -webkit-backdrop-filter: blur(10px);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     }
 
     .feat-item i {
         color: var(--accent-gold);
-        font-size: 1rem;
+        font-size: 1.1rem;
+        transition: transform 0.4s ease;
+    }
+    
+    /* Efeito dinâmico premium no hover */
+    .feat-item:hover {
+        background: rgba(197, 169, 125, 0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px rgba(197, 169, 125, 0.15);
+        border-color: rgba(197, 169, 125, 0.3);
+    }
+    
+    .feat-item:hover i {
+        transform: scale(1.15) rotate(5deg);
     }
 
     .btn-whatsapp {
@@ -821,6 +845,12 @@ body { overflow-x: hidden; width: 100%; }
     .map-border iframe {
         border-radius: 35px;
         display: block;
+        filter: grayscale(80%) sepia(10%) contrast(1.1);
+        transition: filter 0.6s ease;
+    }
+    
+    .map-border:hover iframe {
+        filter: grayscale(40%) sepia(5%) contrast(1.05); /* Recupera um pouco da cor original ao interagir */
     }
 
 .map-border {
@@ -910,7 +940,7 @@ body { overflow-x: hidden; width: 100%; }
 /* --- FOOTER CENTRALIZADO E MINIMALISTA --- */
 .footer-minimal {
     background-color: #f2ede4; /* Bege mais escuro e sofisticado (Taupe) */
-    padding: 100px 0 40px;
+    padding: 60px 0 30px;
     text-align: center;
     border-top: 1px solid rgba(197, 169, 125, 0.15);
 }
@@ -1652,6 +1682,10 @@ body { overflow-x: hidden; width: 100%; }
         align-items: center;
         justify-content: center;
         padding: 5px;
+    }
+
+    .theme-toggle-btn i {
+        pointer-events: none;
     }
 
     .theme-toggle-btn:active {

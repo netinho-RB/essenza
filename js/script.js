@@ -12,21 +12,30 @@ document.addEventListener('DOMContentLoaded', () => {
         const icon = themeToggleM.querySelector('i');
 
         // Check for saved theme
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            body.classList.add('dark-theme');
-            icon.className = 'fa-solid fa-sun';
+        try {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                body.classList.add('dark-theme');
+                icon.className = 'fa-solid fa-sun';
+            }
+        } catch (err) {
+            console.log("localStorage access denied");
         }
 
-        themeToggleM.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
+        themeToggleM.addEventListener('click', (e) => {
+            e.preventDefault(); // Evita comportamentos indesejados no mobile
             
-            if (body.classList.contains('dark-theme')) {
-                localStorage.setItem('theme', 'dark');
-                icon.className = 'fa-solid fa-sun';
-            } else {
-                localStorage.setItem('theme', 'light');
+            // Verifica se está escuro antes de mudar
+            const isDark = body.classList.contains('dark-theme');
+            
+            if (isDark) {
+                body.classList.remove('dark-theme');
                 icon.className = 'fa-solid fa-moon';
+                try { localStorage.setItem('theme', 'light'); } catch(err) {}
+            } else {
+                body.classList.add('dark-theme');
+                icon.className = 'fa-solid fa-sun';
+                try { localStorage.setItem('theme', 'dark'); } catch(err) {}
             }
         });
     }
@@ -155,7 +164,7 @@ window.addEventListener('scroll', function() {
     }, observerOptions);
 
     // Selecionamos elementos específicos (cards, títulos) em vez da seção inteira
-    const elementsToReveal = document.querySelectorAll('.m-section-header, .m-spec-card, .m-team-card, .m-location-card-premium, .m-feat, .about-text h2, .about-text p, .service-card');
+    const elementsToReveal = document.querySelectorAll('.m-section-header, .m-spec-card, .m-team-card, .m-location-card-premium, .m-feat, .about-text h2, .about-text p, .service-card, .section-header, .service-info-premium, .team-content, .team-photo, .location-content, .address-card');
     
     elementsToReveal.forEach((el, index) => {
         el.classList.add('reveal');
