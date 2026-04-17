@@ -23,7 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         themeToggleM.addEventListener('click', (e) => {
-            e.preventDefault(); // Evita comportamentos indesejados no mobile
+            // Removido e.preventDefault() para garantir que browsers Android e iOS
+            // executem o evento click nativo sem bloqueios.
             
             // Verifica se está escuro antes de mudar
             const isDark = body.classList.contains('dark-theme');
