@@ -10,39 +10,44 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-   <div class="m-menu-overlay" id="menu-overlay">
-    <div class="m-menu-card">
-        <div class="m-menu-header">
-            <img src="assets/images/logo-essenza.png" class="m-menu-logo-small">
-            <div class="m-close-btn" id="menu-close">
-                <i class="fa-solid fa-xmark"></i>
+    <div class="m-menu-overlay" id="menu-overlay">
+        <div class="m-menu-card">
+            <div class="m-menu-header">
+                <img src="assets/images/logo-essenza.png" class="m-menu-logo-small">
+                <div class="m-close-btn" id="menu-close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <nav class="m-menu-nav">
+                <a href="#hero" class="menu-link">Início</a>
+                <a href="#equipe-m" class="menu-link">Equipe</a>
+                <a href="#especialidades-m" class="menu-link">Especialidades</a>
+                <a href="#localizacao-m" class="menu-link">Localização</a>
+                <a href="https://wa.me/..." class="menu-link-highlight">Agendar Consulta</a>
+            </nav>
+
+            <div class="m-menu-footer">
+                <p>© 2026 ESSENZA CLINIC</p>
+                <div style="width: 20px; height: 1px; background: var(--accent-gold); opacity: 0.3;"></div>
+                <p>Sorriso, Face e Saúde.</p>
             </div>
         </div>
-        
-        <nav class="m-menu-nav">
-            <a href="#hero" class="menu-link">Início</a>
-            <a href="#equipe-m" class="menu-link">Equipe</a>
-            <a href="#especialidades-m" class="menu-link">Especialidades</a>
-            <a href="#localizacao-m" class="menu-link">Localização</a>
-            <a href="https://wa.me/..." class="menu-link-highlight">Agendar Consulta</a>
-        </nav>
-
-        <div class="m-menu-footer">
-            <p>© 2026 ESSENZA CLINIC</p>
-            <div style="width: 20px; height: 1px; background: var(--accent-gold); opacity: 0.3;"></div>
-            <p>Sorriso, Face e Saúde.</p>
-        </div>
     </div>
-</div>
     <div class="m-wrapper">
         <header class="m-header">
             <img src="assets/images/logo-essenza.png" class="logo-mobile">
-            <div class="m-nav-icon" id="menu-toggle"><span></span><span></span></div>
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <button id="theme-toggle-m" class="theme-toggle-btn" aria-label="Alternar tema escuro/claro">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <div class="m-nav-icon" id="menu-toggle"><span></span><span></span></div>
+            </div>
         </header>
 
         <section class="m-hero" id="hero">
@@ -66,65 +71,83 @@
             </div>
         </section>
 
-      
-      <section class="m-info">
-    <div class="m-section-title-wrapper">
-        <h2 class="m-luxury-title">Equipe Essenza</h2>
-    </div>
-    <div class="m-team-card">
-        <div class="m-team-img">
-            <img src="assets/images/team-essenza.png" alt="Equipe Essenza">
-        </div>
-        <div class="m-team-text">
-            <h3>Equipe Especializada</h3>
-            <p>Especialistas prontos para transformar sua experiência odontológica no coração de Manaíra.</p>
-        </div>
-    </div>
-</section> 
 
-<section class="m-specs" id="especialidades-m">
-    <div class="m-section-header">
-        <span class="m-subtitle">ESPECIALIDADES</span>
-        <h2>Excelência em Detalhes</h2>
-    </div>
-
-    <div class="m-spec-slider">
-        <div class="m-spec-card">
-            <h3>Estética Dental</h3>
-            <p>Lentes de contato e facetas de resina com acabamento natural.</p>
-        </div>
-
-        <div class="m-spec-card">
-            <h3>Harmonização</h3>
-            <p>Procedimentos modernos para realçar sua beleza natural.</p>
-        </div>
-
-        <div class="m-spec-card">
-            <h3>Implantes</h3>
-            <p>Tecnologia avançada para recuperar sua função mastigatória.</p>
-        </div>
-    </div>
-</section>
-<section class="m-location-section" id="localizacao-m">
-    <div class="m-location-card">
-        <div class="m-loc-icon"><i class="fa-solid fa-location-dot"></i></div>
-        <div class="m-loc-info">
-            <strong>Empresarial Excelsior</strong>
-            <p>Av. João Câncio, 620 | Sala 802</p>
-            <p>Manaíra, João Pessoa - PB</p>
-        </div>
-        
-        <a href="https://maps.google.com" target="_blank" class="m-btn-maps">
-            <span class="m-btn-label">ABRIR NO GOOGLE MAPS</span>
-            <div class="m-map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.213423!2d-34.831!3d-7.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDYnNDAuMCJTIDM0wrA0OSc1MS42Ilc!5e0!3m2!1spt-BR!2sbr!4v1"
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-                </iframe>
+        <section class="m-info">
+            <div class="m-section-title-wrapper">
+                <h2 class="m-luxury-title">Equipe Essenza</h2>
             </div>
-        </a>
-    </div>
-</section>
+            <div class="m-team-card">
+                <div class="m-team-img">
+                    <img src="assets/images/team-essenza.png" alt="Equipe Essenza">
+                </div>
+                <div class="m-team-text">
+                    <h3>Equipe Especializada</h3>
+                    <p>Especialistas prontos para transformar sua experiência odontológica no coração de Manaíra.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="m-specs" id="especialidades-m">
+            <div class="m-section-header">
+                <span class="m-subtitle">ESPECIALIDADES</span>
+                <h2>Excelência em Detalhes</h2>
+            </div>
+
+            <div class="m-spec-slider">
+                <div class="m-spec-card">
+                    <div class="m-spec-icon-wrapper">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3>Estética Dental</h3>
+                    <p>Lentes de contato e facetas de resina com acabamento natural.</p>
+                </div>
+
+                <div class="m-spec-card">
+                    <div class="m-spec-icon-wrapper">
+                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Harmonização</h3>
+                    <p>Procedimentos modernos para realçar sua beleza natural.</p>
+                </div>
+
+                <div class="m-spec-card">
+                    <div class="m-spec-icon-wrapper">
+                        <i class="fa-solid fa-tooth"></i>
+                    </div>
+                    <h3>Implantes</h3>
+                    <p>Tecnologia avançada para recuperar sua função mastigatória.</p>
+                </div>
+            </div>
+        </section>
+        <section class="m-location-section" id="localizacao-m" style="padding: 60px 20px;">
+            <div class="m-section-header" style="text-align: center; margin-bottom: 30px;">
+                <span class="m-subtitle">ONDE ESTAMOS</span>
+                <h2 style="font-family: 'Playfair Display', serif; font-size: 2.2rem; margin-top: 10px; color: var(--primary-dark);">Nossa Clínica</h2>
+            </div>
+            
+            <div class="m-location-card-premium">
+                <div class="m-loc-icon-premium">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+                
+                <div class="m-loc-info-premium">
+                    <h3>Empresarial Excelsior</h3>
+                    <p>Av. João Câncio da Silva, 620</p>
+                    <p>Sala 802 - Manaíra, João Pessoa - PB</p>
+                </div>
+
+                <div class="m-map-container-premium">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.213423!2d-34.831!3d-7.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDYnNDAuMCJTIDM0wrA0OSc1MS42Ilc!5e0!3m2!1spt-BR!2sbr!4v1"
+                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+                <a href="https://maps.google.com" target="_blank" class="m-btn-outline-gold">
+                    <i class="fa-solid fa-map-location-dot" style="margin-right: 8px;"></i> ABRIR NO GOOGLE MAPS
+                </a>
+            </div>
+        </section>
 
         <footer class="m-footer" style="padding: 60px 20px 40px; background: var(--creme); text-align: center;">
             <img src="assets/images/logo-essenza.png" style="height: 40px; margin-bottom: 15px;">
@@ -141,7 +164,8 @@
 
             <div style="width: 40px; height: 1px; background: var(--accent-gold); margin: 0 auto 20px; opacity: 0.5;">
             </div>
-            <p style="font-size: 0.65rem; opacity: 0.6; letter-spacing: 1px;">© 2026 ESSENZA CLINIC. DESIGN BY CODE LAB.</p>
+            <p style="font-size: 0.65rem; opacity: 0.6; letter-spacing: 1px;">© 2026 ESSENZA CLINIC. DESIGN BY CODE LAB.
+            </p>
         </footer>
 
 
@@ -194,40 +218,40 @@
             </div>
         </section>
         <section id="sobre" class="about">
-    <div class="container about-grid">
+            <div class="container about-grid">
 
 
 
-        <div class="about-gallery-single">
-            <div class="main-image-wrapper">
-                <img src="assets/images/hero-essenza.webp" alt="Consultório Essenza" class="about-img-single">
-                
-                <div class="floating-hours-card">
-                    <span class="hours-subtitle">HORÁRIO DE ATENDIMENTO</span>
-                    <p>Segunda a Sexta — <strong>09:00h às 19:00h</strong></p>
-                    <p>Sábado — <strong>09:00h às 13:00h</strong></p>
+                <div class="about-gallery-single">
+                    <div class="main-image-wrapper">
+                        <img src="assets/images/hero-essenza.webp" alt="Consultório Essenza" class="about-img-single">
+
+                        <div class="floating-hours-card">
+                            <span class="hours-subtitle">HORÁRIO DE ATENDIMENTO</span>
+                            <p>Segunda a Sexta — <strong>09:00h às 19:00h</strong></p>
+                            <p>Sábado — <strong>09:00h às 13:00h</strong></p>
+                        </div>
+                    </div>
                 </div>
+
+
+
+
+                <div class="about-text">
+                    <span class="subtitle">SOBRE NÓS</span>
+                    <h2>Muito mais que um consultório, uma <span>experiência.</span></h2>
+
+                    <div class="divider-gold"></div>
+
+                    <p>Localizada no Empresarial Excelsior, em João Pessoa, a Essenza Clinic foi projetada para oferecer
+                        conforto e sofisticação desde o primeiro momento. Um ambiente moderno, equipado com o que há de
+                        mais atual para que cada atendimento seja único e focado no seu bem-estar.</p>
+                </div>
+
+
+
             </div>
-        </div>
-
-
-
-
-        <div class="about-text">
-            <span class="subtitle">SOBRE NÓS</span>
-            <h2>Muito mais que um consultório, uma <span>experiência.</span></h2>
-
-            <div class="divider-gold"></div>
-
-            <p>Localizada no Empresarial Excelsior, em João Pessoa, a Essenza Clinic foi projetada para oferecer
-                conforto e sofisticação desde o primeiro momento. Um ambiente moderno, equipado com o que há de
-                mais atual para que cada atendimento seja único e focado no seu bem-estar.</p>
-        </div>
-
-        
-
-    </div>
-</section>
+        </section>
         <section class="services" id="especialidades">
             <div class="container">
                 <div class="section-header">
@@ -364,24 +388,24 @@
                 </div>
             </div>
         </section>
-<footer class="footer-minimal">
-    <div class="container f-content-center">
-        <img src="assets/images/logo-essenza.png" alt="Essenza" class="f-logo-center">
-        <p class="f-slogan-italic">Sorriso, Face e Saúde no coração de João Pessoa.</p>
+        <footer class="footer-minimal">
+            <div class="container f-content-center">
+                <img src="assets/images/logo-essenza.png" alt="Essenza" class="f-logo-center">
+                <p class="f-slogan-italic">Sorriso, Face e Saúde no coração de João Pessoa.</p>
 
-        <div class="f-social-center">
-            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-        </div>
+                <div class="f-social-center">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
 
-        <div class="f-copyright-simple">
-            <div class="f-divider-center"></div>
-            <p>© 2026 ESSENZA CLINIC. TODOS OS DIREITOS RESERVADOS.</p>
-            <span class="f-author-name">DESIGN BY CODE LAB.</span>
-        </div>
-    </div>
-</footer>
+                <div class="f-copyright-simple">
+                    <div class="f-divider-center"></div>
+                    <p>© 2026 ESSENZA CLINIC. TODOS OS DIREITOS RESERVADOS.</p>
+                    <span class="f-author-name">DESIGN BY CODE LAB.</span>
+                </div>
+            </div>
+        </footer>
     </main>
 
     <script src="js/script.js"></script>
